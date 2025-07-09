@@ -1,0 +1,67 @@
+.agende {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    color: #f0f0f0;
+    background-color: var(--cor-base); 
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    font-family: var(--josefin);
+}
+
+.agende .jarallax-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+}
+
+.agende .btn-whatsapp {
+    padding: 20px 40px;
+    background-color: #f0f0f000;
+    font-size: 1.3em;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.agende p{
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.agende a{
+    color: var(--cor-base);
+    font-size: 1.3em;
+}
+
+.agende i{
+    font-size: 1.3em;
+    margin: 0 8px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .agende .btn-whatsapp {
+        padding: 15px 30px !important;
+        font-size: 16px !important;
+    }
+
+    .agende p{
+        display: none;
+    }
+    
+    .agende a{
+        color: var(--cor-base);
+        font-size: 1em;
+    }
+    
+    .agende i{
+        font-size: 1.2em;
+        margin: 0 8px;
+    }
+}

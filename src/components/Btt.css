@@ -1,0 +1,35 @@
+.btt{
+    background-color: var(--cor-base);
+    width: 70px;
+    height: 70px;
+    border: 1px solid rgba(255, 255, 255, 0.336);
+    border-radius: 100px;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    z-index: 10;
+    opacity: 1; 
+    transition: opacity 0.3s ease-in-out; 
+    cursor: pointer;
+}
+
+.btt:hover{
+    transform: scale(1.02);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    opacity: 1 !important;
+}
+
+.btt i{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 2.7em;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
