@@ -326,4 +326,21 @@
         box-sizing: border-box;
     }
 
+    .post-box{
+        position: relative;
+        display: flex;
+    }
+
+    .post-text{
+        position: relative;
+        display: flex;
+        box-sizing: border-box;
+        width: auto !important;
+        margin: 0 20px !important;
+    }
+
+    .post-container .btn-voltar{
+        display: none;
+    }
+
 }
