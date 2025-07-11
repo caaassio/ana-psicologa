@@ -1,0 +1,129 @@
+.autorBox{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 960px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+
+.autorPostBox{
+    display: flex;
+    padding: 20px !important;
+    margin: 0 !important;
+    gap: 30px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.autorPostBox::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(to right, #fd505000, #5a5a5a, #f7f75c00);
+    z-index: 10;
+}
+
+.autorPostBox img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.autorPostBox h2{
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 600;
+}
+
+.autorPostBox p{
+    font-size: 1em;
+    margin: 0;
+    font-weight: 500;
+}
+
+.autorPerfil{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sociais-redes{
+    display: flex;
+    gap: 10px;
+    background-color: #f0f0f0;
+    padding: 10px 0 10px 20px;
+}
+
+
+@media (max-width: 1250px) {
+
+    .post-text{
+        width: 80%;
+    }
+
+    .autorBox{
+        width: 80%;
+    }
+}
+
+@media (max-width: 992px) {
+    .sociais-redes i{
+    color: rgb(43, 43, 43);
+    font-size: 1.8em;
+}
+}
+
+@media (max-width: 765px) {
+
+    .autorPostBox{
+        gap: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .autorPostBox p{
+        font-size: 0.7em !important;
+    }
+
+    .autorPostBox h2{
+        font-size: 1.1em !important;
+    }
+
+    .autorBox{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .autorPostBox img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .sociais-redes{
+        padding: 10px 0 !important;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .autorBox{
+        max-width: 100%;
+        width: auto;
+        margin: 0 20px 20px 20px !important;
+        box-sizing: border-box;
+    }
+
+}

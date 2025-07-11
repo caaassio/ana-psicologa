@@ -8,7 +8,7 @@ export default function Testimonial({ text, author }) {
         {text.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
-        <span className="autor">{author}</span>
+        <span className="autorDepoimento">{author}</span>
       </blockquote>
     </div>
   )
