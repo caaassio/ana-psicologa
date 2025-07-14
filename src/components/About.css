@@ -322,10 +322,10 @@
 
     .foto-sobre {
         display: flex;
-        width: 300px;
-        height: 300px;
-        min-height: 300px;
-        max-width: 300px;
+        width: 250px;
+        height: 250px;
+        min-height: 250px;
+        max-width: 250px;
         box-sizing: border-box;
         overflow: hidden;
         margin-bottom: 20px;
@@ -334,7 +334,7 @@
     .foto-sobre img {
         padding-top: 190px;
         width: 100%;
-        height: 500px;
+        height: 420px;
         display: flex;
         object-fit: cover !important;
     }

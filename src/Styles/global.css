@@ -58,3 +58,9 @@ a:visited {
 a:hover {
     color: #ffffff;
 }
+
+@media (max-width: 576px) {
+    h2{
+        font-size: 2em;
+    }
+}
