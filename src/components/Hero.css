@@ -204,13 +204,17 @@
 
     .texto-home h1{
         margin: 15px;
-        font-size: 2.2em;
+        font-size: 2em !important;
+        line-height: 1.2em !important;
+    }
+    
+    .texto-home p{
+        font-size: 1.1em !important;      
     }
 
     #home .btn-whatsapp {
-        padding: 15px 35px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        font-size: 1.1em !important;
+        padding: 15px 20px !important;
     }
 
 }

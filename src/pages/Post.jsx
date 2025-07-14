@@ -60,7 +60,15 @@ export default function Post() {
     },
   }
 
-  if (loading) return <div>Carregando...</div>
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <i className="fa-solid fa-spinner fa-spin fa-2x"></i>
+        <p>Carregando posts...</p>
+      </div>
+    )
+  }
+
   if (!post) return <div>Post não encontrado.</div>
 
   const dataFormatada = new Date(post.publishedAt).toLocaleDateString('pt-BR', {

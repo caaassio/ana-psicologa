@@ -125,6 +125,8 @@
         margin: 0 20px 20px 20px !important;
         box-sizing: border-box;
         padding: 8px;
+        display: flex;
+        position: relative;
     }
 
     .autorBox img{
@@ -137,6 +139,11 @@
     }
 
     .sociais-redes ul li{
+        padding: 5px;
+    }
+
+    .autorPerfil p{
+        font-size: 0.9em !important;
         padding: 5px;
     }
 

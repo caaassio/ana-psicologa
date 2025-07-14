@@ -59,8 +59,12 @@ a:hover {
     color: #ffffff;
 }
 
+/* Media Queries -------------------------------------------------------*/
 @media (max-width: 576px) {
     h2{
         font-size: 2em;
+    }
+    body{
+        padding-top: 4em !important;
     }
 }

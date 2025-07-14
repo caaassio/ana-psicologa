@@ -116,7 +116,6 @@
     .service-card{
         width: 80% !important;
         line-height: 1em;
-
     }
 
     .contato-info{
@@ -125,5 +124,22 @@
 
     .redes-sociais ul{
         padding: 0;
+    }
+    
+    #contato .contato-item{
+        font-size: 1.1em !important;
+        padding: 5px 40px !important;
+    }
+
+    #contato .redes-sociais ul{
+        padding: 0 !important;
+    }
+
+    #contato .redes-sociais ul li a{
+        padding: 10px !important;
+    }
+
+    #contato .redes-sociais ul li i{
+        font-size: 0.9em;
     }
 }

@@ -307,6 +307,10 @@
         box-sizing: border-box;
     }
 
+    #sobre h2{
+        padding: 10px 0 !important;
+    }
+
     .header-about h2{
         font-size: 2em;
         padding: 20px 0;

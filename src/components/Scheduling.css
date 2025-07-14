@@ -45,7 +45,10 @@
 }
 
 @media screen and (max-width: 768px) {
-
+    
+    .agende{
+        height: 130px !important;
+    }
     .agende .btn-whatsapp {
         padding: 15px 30px !important;
         font-size: 16px !important;
