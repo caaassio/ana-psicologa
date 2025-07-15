@@ -64,7 +64,7 @@ export default function Post() {
     return (
       <div className="loading-container">
         <i className="fa-solid fa-spinner fa-spin fa-2x"></i>
-        <p>Carregando posts...</p>
+        <p>Carregando post...</p>
       </div>
     )
   }
