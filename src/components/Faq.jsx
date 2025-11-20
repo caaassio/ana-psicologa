@@ -26,16 +26,6 @@ const faqData = [
     answer:
       'A terapia pode ser benéfica para qualquer pessoa, mas os resultados dependem do compromisso do paciente e da relação com o terapeuta.'
   },
-  {
-    question: 'Schwarzenegger',
-    answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolorem esse eligendi voluptatibus necessitatibus inventore saepe optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur adipisci in quas minus sapiente quia alias, quos fugit voluptatibus sed laborum possimus architecto atque hic optio. Voluptates deserunt quasi maiores!'
-  },
-  {
-    question: 'Stallone',
-    answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolorem esse eligendi voluptatibus necessitatibus inventore saepe optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur adipisci in quas minus sapiente quia alias, quos fugit voluptatibus sed laborum possimus architecto atque hic optio. Voluptates deserunt quasi maiores!'
-  }
 ]
 
 export default function Faq() {
