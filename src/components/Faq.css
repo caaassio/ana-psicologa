@@ -85,7 +85,7 @@
 }
 
 .accordion-item-body.active {
-  max-height: 500px; /* valor grande o suficiente */
+  max-height: 500px; 
 }
 
 .accordion-item-body-content{
@@ -156,7 +156,6 @@
     .accordion-item{
         font-size: 18px;
     }
-
 }
 
 @media (max-width: 576px) {

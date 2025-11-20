@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom'
 
 export default function Posts() {
   const [posts, setPosts] = useState([])
-
+  const [loading, setLoading] = useState(true)
+  
   useEffect(() => {
     sanityClient
       .fetch(`*[_type == "post"] | order(publishedAt desc){
@@ -15,9 +16,26 @@ export default function Posts() {
         "slug": slug.current,
         "mainImageUrl": mainImage.asset->url
       }`)
-      .then((data) => setPosts(data))
-      .catch(console.error)
+      .then((data) => {
+        setPosts(data)
+        setLoading(false)
+      })
+      .catch((error) =>{
+        console.error(error)
+        setLoading(false)
+      })
   }, [])
+
+  if (loading) {
+    return (
+      <DefaultLayout>
+        <div className="loading-container">
+          <i className="fa-solid fa-spinner fa-spin fa-2x"></i>
+          <p>Carregando posts...</p>
+        </div>
+      </DefaultLayout>
+    )
+  }
 
   return (
     <DefaultLayout>

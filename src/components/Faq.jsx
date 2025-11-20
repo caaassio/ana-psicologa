@@ -40,7 +40,7 @@ const faqData = [
 
 export default function Faq() {
   const [activeIndex, setActiveIndex] = useState(null)
-  const contentRefs = useRef([]) // array para refs das respostas
+  const contentRefs = useRef([]) 
 
   const toggleItem = (index) => {
     setActiveIndex(activeIndex === index ? null : index)

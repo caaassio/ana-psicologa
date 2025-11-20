@@ -84,7 +84,6 @@ export default function Post() {
     return time
   }
 
-  // Extrair todo texto do corpo para estimar leitura
   const bodyText = post.body
     .map(block => block.children.map(child => child.text).join(' '))
     .join(' ')
