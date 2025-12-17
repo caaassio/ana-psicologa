@@ -42,7 +42,6 @@ export default function Header() {
     closeMenu()
   }
 
-  // Função auxiliar para renderizar links de seção
   const renderSectionLink = (id, label) => {
     if (location.pathname === '/') {
       return (
@@ -51,7 +50,7 @@ export default function Header() {
         </a>
       )
     } else {
-      // Fora da home, usa Link para navegar para home com âncora
+
       return (
         <Link to={`/#${id}`} onClick={closeMenu}>
           {label}
