@@ -10,7 +10,7 @@
     height: auto;
     width: 100%;
     overflow: hidden;
-
+    scroll-margin-top: 5em;
 }
 
 #home .jarallax-img {

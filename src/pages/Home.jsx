@@ -18,7 +18,7 @@ export default function Home() {
       if (element) {
         setTimeout(() => {
           element.scrollIntoView({ behavior: 'smooth' })
-        }, 100) // espera o DOM renderizar
+        }, 100) 
       }
     }
   }, [location])

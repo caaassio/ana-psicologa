@@ -36,7 +36,6 @@
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
-
     width: 100%;
     max-width: 1200px;
 }
@@ -91,7 +90,11 @@
     align-items: center;
     overflow: hidden;
     position: relative;
-    max-width: 100%;
+    width: 563px;
+    height: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
 }
 
 .foto-slide {
@@ -102,6 +105,21 @@
     height: auto;
     border-radius: 20px;
     object-fit: cover;
+    transform: scale(1);
+    animation: heroZoom 15s ease-in-out infinite alternate;
+}
+
+.foto-slide.ativo {
+  opacity: 1;
+}
+
+@keyframes heroZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
 }
 
 .foto-slide.ativo {

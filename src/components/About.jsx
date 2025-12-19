@@ -17,7 +17,7 @@ export default function About() {
       setIndiceAtual((prev) => (prev + 1) % imagens.length)
     }, 8000)
 
-    return () => clearInterval(intervaloRef.current) // limpeza do intervalo
+    return () => clearInterval(intervaloRef.current) 
   }, [])
 
   return (
