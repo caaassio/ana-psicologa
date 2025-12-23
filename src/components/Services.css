@@ -42,8 +42,13 @@
     justify-content: center;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.329);
+    /* background: linear-gradient(135deg, #ffffff62, rgba(219, 142, 135, 0.157)); */
     border-radius: 20px;
     box-shadow: 5px 5px 10px 5px rgba(0,0,0, 0.05);
+}
+
+.service-card:hover{
+    box-shadow: 5px 5px 10px 5px rgba(219, 142, 135, 0.24);
 }
 
 .service-header{
@@ -58,6 +63,13 @@
     font-size: 2em;
     padding: 15px 25px 15px 0px;
     color: var(--cor-base);
+    transform:scale(1);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-header i{
+    transform:scale(1.1);
+    transition: all 0.3s ease;
 }
 
 .service-header h3{
