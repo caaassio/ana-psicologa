@@ -45,15 +45,19 @@
 }
 
 #home .btn-whatsapp {
-    display: inline-block;
+    display: flex;
     position: relative;
-    padding: 15px 35px;
+    height: 3.5rem;
+    width: 26rem;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0);
     font-size: 1.2em;
     color: rgb(0, 0, 0);
     border: 1px solid black;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 0;
+
+    padding-top: 2px;
 }
 
 @media (max-width: 1200px) and (min-width: 992px){
