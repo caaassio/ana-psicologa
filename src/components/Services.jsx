@@ -10,27 +10,27 @@ const services = [
   {
     icon: 'fa-face-expressionless',
     title: 'Depressão',
-    text: 'Sentir-se ansioso o tempo todo pode ser exaustivo. A terapia oferece um espaço seguro para compreender esses sentimentos e aprender a controlá-los no dia a dia.'
+    text: ' A depressão pode envolver tristeza persistente, desânimo e sensação de vazio. O processo terapêutico oferece um espaço de escuta e acolhimento para compreender esse sofrimento e resgatar sentidos, respeitando o tempo e a história de cada pessoa.'
   },
   {
     icon: 'fa-thumbs-up',
     title: 'Autoestima',
-    text: 'Sentir-se ansioso o tempo todo pode ser exaustivo. A terapia oferece um espaço seguro para compreender esses sentimentos e aprender a controlá-los no dia a dia.'
+    text: 'Dificuldades na autoestima podem gerar insegurança, autocrítica e dificuldade em se posicionar. Na terapia, trabalhamos a construção de uma relação mais gentil consigo, fortalecendo identidade, limites e autonomia emocional.'
   },
   {
     icon: 'fa-handshake',
     title: 'Relacionamentos',
-    text: 'Sentir-se ansioso o tempo todo pode ser exaustivo. A terapia oferece um espaço seguro para compreender esses sentimentos e aprender a controlá-los no dia a dia.'
+    text: 'Conflitos nos relacionamentos familiares, amorosos ou sociais podem gerar sofrimento e repetição de padrões. A psicoterapia ajuda a compreender essas dinâmicas e a construir vínculos mais conscientes, saudáveis e autênticos.'
   },
   {
-    icon: 'fa-face-head-bandage',
-    title: 'Traumas',
-    text: 'Sentir-se ansioso o tempo todo pode ser exaustivo. A terapia oferece um espaço seguro para compreender esses sentimentos e aprender a controlá-los no dia a dia.'
+    icon: 'fa-regular fa-rotate-exclamation',
+    title: 'Compulsões',
+    text: 'SAs compulsões costumam funcionar como tentativas de aliviar angústias internas. Na terapia, buscamos compreender o sentido desses comportamentos e desenvolver formas mais conscientes e saudáveis de lidar com as emoções.'
   },
   {
     icon: 'fa-briefcase',
     title: 'Carreira',
-    text: 'Sentir-se ansioso o tempo todo pode ser exaustivo. A terapia oferece um espaço seguro para compreender esses sentimentos e aprender a controlá-los no dia a dia.'
+    text: 'Questões de carreira podem envolver insegurança, esgotamento ou dificuldade de escolhas. A psicoterapia oferece um espaço para refletir sobre trajetórias, desejos e limites, favorecendo decisões mais alinhadas ao bem-estar emocional.'
   }
 ]
 
