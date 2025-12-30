@@ -5,7 +5,7 @@ const services = [
   {
     icon: 'fa-face-anxious-sweat',
     title: 'Ansiedade',
-    text: 'A ansiedade pode se manifestar como preocupação excessiva, medo constante, agitação, tensão corporal ou dificuldade para relaxar. Muitas vezes, ela aparece quando algo interno ou externo parece fora de controle. Na psicoterapia, trabalhamos para compreender as origens dessa ansiedade, reconhecer padrões de pensamento e desenvolver formas mais saudáveis de lidar com as emoções. O objetivo é construir mais segurança interna e qualidade de vida no dia a dia.'
+    text: 'A ansiedade pode se manifestar como preocupação excessiva, medo constante e tensão emocional. Na psicoterapia, trabalhamos a compreensão desses sintomas e o desenvolvimento de recursos para lidar melhor com as emoções, promovendo mais equilíbrio e qualidade de vida.'
   },
   {
     icon: 'fa-face-expressionless',
