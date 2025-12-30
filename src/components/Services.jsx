@@ -5,7 +5,7 @@ const services = [
   {
     icon: 'fa-face-anxious-sweat',
     title: 'Ansiedade',
-    text: 'Sentir-se ansioso o tempo todo pode ser exaustivo. A terapia oferece um espaço seguro para compreender esses sentimentos e aprender a controlá-los no dia a dia.'
+    text: 'A ansiedade pode se manifestar como preocupação excessiva, medo constante, agitação, tensão corporal ou dificuldade para relaxar. Muitas vezes, ela aparece quando algo interno ou externo parece fora de controle. Na psicoterapia, trabalhamos para compreender as origens dessa ansiedade, reconhecer padrões de pensamento e desenvolver formas mais saudáveis de lidar com as emoções. O objetivo é construir mais segurança interna e qualidade de vida no dia a dia.'
   },
   {
     icon: 'fa-face-expressionless',
