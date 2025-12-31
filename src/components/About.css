@@ -375,14 +375,22 @@
         width: 100%;
         padding: 15px 20px;
         box-sizing: border-box;
+
     }
 
     .foto-sobre-inferior {
         order: 4;
-        margin: 15px;
         box-sizing: border-box;
-        height: 100%;
+        height: auto;
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
     }
 
     .foto-sobre img{

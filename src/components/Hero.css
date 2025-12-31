@@ -218,7 +218,8 @@
 
     #home .btn-whatsapp {
         font-size: 1.1em !important;
-        padding: 15px 20px !important;
+        width: 80%;
+        padding: 10px 15px !important;
     }
 
 }
