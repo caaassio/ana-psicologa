@@ -163,4 +163,8 @@
     #faq{
         padding: 30px 25px 0 25px !important;
     }
+
+    #faq h2{
+        font-size: 2rem;
+    }
 }
