@@ -144,7 +144,7 @@
 
     #faq h2 {
         font-family: var(--cambria);
-        /* font-size: 2em; */
+        font-size: 2em;
         padding: 0px 0px 15px 0;
         margin: 0px;
         flex-wrap: nowrap;
