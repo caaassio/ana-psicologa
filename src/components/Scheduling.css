@@ -1,6 +1,6 @@
 .agende {
     display: flex;
-    height: 200px;
+    height: 10rem;
     width: 100%;
     align-items: center;
     justify-content: space-around;
@@ -20,13 +20,13 @@
 }
 
 .agende .btn-whatsapp {
-    padding: 20px 40px;
     background-color: #f0f0f000;
-    font-size: 1.3em;
     color: white;
     border: 1px solid white;
     border-radius: 10px;
     box-shadow: none;
+    padding: 1rem 2rem;
+    font-size: 1.2em;
 }
 
 .agende p{

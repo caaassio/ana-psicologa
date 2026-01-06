@@ -25,6 +25,7 @@ export default function Hero() {
           <br/>É nesse ponto que muitas pessoas chegam até mim.
         </p>
 
+      <div className="btn-wrapper">
         <a
           href="https://wa.me/5511949186999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
           target="_blank"
@@ -34,6 +35,24 @@ export default function Hero() {
         >
           COMECE A SUA MUDANÇA POR AQUI
         </a>
+
+        <button
+          className="btn-whatsapp-saiba"
+          onClick={() => {
+            const section = document.getElementById('servicos')
+            if (section) {
+              const yOffset = -80 
+              const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset
+
+              window.scrollTo({ top: y, behavior: 'smooth' })
+            }
+          }}
+        >
+          SAIBA MAIS
+        </button>
+
+      </div>
+        
       </div>
     </section>
   )

@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     color: white;
-    padding: 0 30px;
+    padding: 0 10%;
     box-sizing: border-box;
     top: 0;
     left: 0;
@@ -40,7 +40,7 @@ header ul li a {
     transition: all 0.3s ease;
     border: 1px solid transparent;
     border-radius: 5px;
-    padding: 15px;
+    padding: 0.8rem;
 }
 
 header #escrito {

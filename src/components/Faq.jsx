@@ -49,49 +49,65 @@ const faqData = [
 ]
 
 export default function Faq() {
+  
   const [activeIndex, setActiveIndex] = useState(null)
   const contentRefs = useRef([]) 
+  const [expanded, setExpanded] = useState(false)
 
   const toggleItem = (index) => {
     setActiveIndex(activeIndex === index ? null : index)
   }
 
   return (
-    <section id="faq">
-      <h2>Dúvidas frequentes</h2>
-      <div className="accordion">
-        {faqData.map((item, index) => {
-          const isActive = activeIndex === index
-          return (
-            <div
-              key={index}
-              className={`accordion-item ${isActive ? 'active' : ''}`}
-              onClick={() => toggleItem(index)}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transition = 'filter 0.5s ease-out, transform 0.5s ease-out'
-                setTimeout(() => {
-                  e.currentTarget.style.transition = ''
-                }, 500)
-              }}
-            >
-              <div className={`accordion-item-header ${isActive ? 'active' : ''}`}>
-                {item.question}
-              </div>
+    <section className="faq-wrapper">
+      <section id="faq" className={expanded ? 'expanded' : ''}>
+        <h2>Dúvidas frequentes</h2>
+        <div className="accordion">
+          {faqData.map((item, index) => {
+            const isActive = activeIndex === index
+            return (
               <div
-                className="accordion-item-body"
-                ref={el => (contentRefs.current[index] = el)}
-                style={{
-                  maxHeight: isActive ? `${contentRefs.current[index]?.scrollHeight}px` : '0',
-                  overflow: 'hidden',
-                  transition: 'max-height 0.5s ease'
+                key={index}
+                className={`accordion-item ${isActive ? 'active' : ''}`}
+                onClick={() => toggleItem(index)}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transition = 'filter 0.5s ease-out, transform 0.5s ease-out'
+                  setTimeout(() => {
+                    e.currentTarget.style.transition = ''
+                  }, 500)
                 }}
               >
-                <div className="accordion-item-body-content">{item.answer}</div>
+                <div className={`accordion-item-header ${isActive ? 'active' : ''}`}>
+                  {item.question}
+                </div>
+                <div
+                  className="accordion-item-body"
+                  ref={el => (contentRefs.current[index] = el)}
+                  style={{
+                    maxHeight: isActive ? `${contentRefs.current[index]?.scrollHeight}px` : '0',
+                    overflow: 'hidden',
+                    transition: 'max-height 0.5s ease'
+                  }}
+                >
+                  <div className="accordion-item-body-content">{item.answer}</div>
+                </div>
               </div>
-            </div>
-          )
-        })}
-      </div>
+            )
+          })}
+        </div>
+
+      </section>
+
+      <div className="faq-toggle-wrapper">
+          <button
+            className="faq-toggle-btn"
+            onClick={() => setExpanded(!expanded)}
+          >
+            {expanded ? 'Ver menos' : 'Ver mais'}
+          </button>
+        </div>
+
     </section>
+
   )
 }

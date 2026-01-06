@@ -1,6 +1,12 @@
-#faq{
+.faq-wrapper{
     width: 100%;
-    height: auto;
+    position: relative;
+    background-color: #fff;
+}
+
+#faq{
+    max-height: 550px;
+    width: auto;
     box-shadow: 5px 5px 5px 0px rgba(0,0,0, 0.01);
     box-sizing: border-box;
     z-index: 1;
@@ -8,6 +14,76 @@
     margin: 0;
     margin-left: auto;
     margin-right: auto;
+    transform: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+}
+
+#faq .accordion {
+    max-height: 550px;
+    transition:
+        max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s ease;
+}
+
+#faq.expanded .accordion {
+    max-height: 3000px;
+    opacity: 1;
+}
+
+#faq .accordion::after {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+#faq.expanded .accordion::after {
+    opacity: 0;
+}
+
+#faq:not(.expanded) .accordion {
+    opacity: 0.98;
+}
+
+
+#faq.expanded {
+    max-height: 2000px; 
+    transform: max-height 0.8s ease-in;
+}
+
+#faq::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #fff);
+    pointer-events: none;
+}
+
+#faq.expanded::after {
+    display: none;
+}
+
+.faq-toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.faq-toggle-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--cor-base);
+    background-color: #fff;
+    border: 1px solid var(--cor-base);
+    border-radius: 10px;
+    box-shadow: none;
+    padding: 1rem 2rem;
+    font-size: 1.2em;
 }
 
 #faq h2 {
@@ -27,7 +103,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     font-size: 20px;
-    padding: 0 0 30px 0;
+    padding: 0 0 0 0;
     font-size: 19px;
     font-family: var(--josefin);
 }

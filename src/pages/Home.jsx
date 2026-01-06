@@ -8,6 +8,8 @@ import Faq from '../components/Faq'
 import Contact from '../components/Contact'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import FloatZap from '../components/FloatingWhatsapp'
+
 export default function Home() {
 
   const location = useLocation()
@@ -33,6 +35,7 @@ export default function Home() {
       <Services />
       <Faq />
       <Contact />
+      <FloatZap />
     </DefaultLayout>
 
   )

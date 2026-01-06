@@ -44,6 +44,11 @@
     object-fit: cover;
 }
 
+.btn-wrapper{
+    display: flex;
+    gap: 2rem;
+}
+
 #home .btn-whatsapp {
     display: flex;
     position: relative;
@@ -56,8 +61,32 @@
     color: rgb(0, 0, 0);
     border: 1px solid black;
     margin: 50px 0;
-
     padding-top: 2px;
+}
+
+#home .btn-whatsapp-saiba {
+    display: flex;
+    position: relative;
+    height: 3.5rem;
+    width: 10rem;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-base);
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    border: none;
+    margin: 50px 0;
+    padding-top: 2px;
+    font-family: var(--josefin);
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    text-align: center;
+}
+
+.btn-whatsapp-saiba:hover{
+    transform: scale(1.05);
 }
 
 @media (max-width: 1200px) and (min-width: 992px){
@@ -146,9 +175,27 @@
         box-shadow: none;
         box-sizing: border-box;
     }
+
+    .btn-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .btn-whatsapp{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .btn-whatsapp-saiba{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
     
     h2{
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .foto-home{
@@ -189,7 +236,6 @@
         padding-top: 35px;
         height: 100%;
     }
-
     .foto-home{
         width: 250px;
         height: 250px;
@@ -207,8 +253,8 @@
     }
 
     .texto-home h1{
-        margin: 15px;
-        font-size: 2em !important;
+        margin: 0.8rem;
+        font-size: 1.6em !important;
         line-height: 1.2em !important;
     }
     
@@ -220,6 +266,10 @@
         font-size: 1.1em !important;
         width: 80%;
         padding: 10px 15px !important;
+    }
+
+    .btn-whatsapp-saiba{
+        width: 90% !important;
     }
 
 }
