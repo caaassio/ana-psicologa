@@ -375,7 +375,6 @@
         width: 100%;
         padding: 15px 20px;
         box-sizing: border-box;
-
     }
 
     .foto-sobre-inferior {
@@ -400,6 +399,17 @@
         width: 90%;
         height: auto;
         border-radius: 20px;
+        animation: heroZoom2 15s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroZoom2 {
+
+        from {
+            transform: scale(1.1);
+        }
+        to {
+            transform: scale(1.3);
+        }
     }
 
 }

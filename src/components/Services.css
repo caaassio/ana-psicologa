@@ -33,7 +33,7 @@
 }
 
 .service-card {
-    width: 100% !important; 
+    width: 350px !important; 
     box-sizing: border-box;
     height: auto;
     display: flex;
