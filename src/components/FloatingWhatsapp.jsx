@@ -10,7 +10,6 @@ export default function FloatingWhatsapp() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // se o hero NÃO está visível → mostra o botão
         setVisible(!entry.isIntersecting)
       },
       {
