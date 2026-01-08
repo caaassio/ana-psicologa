@@ -25,7 +25,7 @@ const services = [
   {
     icon: 'fa-regular fa-rotate-exclamation',
     title: 'Compulsões',
-    text: 'SAs compulsões costumam funcionar como tentativas de aliviar angústias internas. Na terapia, buscamos compreender o sentido desses comportamentos e desenvolver formas mais conscientes e saudáveis de lidar com as emoções.'
+    text: 'As compulsões costumam funcionar como tentativas de aliviar angústias internas. Na terapia, buscamos compreender o sentido desses comportamentos e desenvolver formas mais conscientes e saudáveis de lidar com as emoções.'
   },
   {
     icon: 'fa-briefcase',
