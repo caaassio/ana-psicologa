@@ -5,6 +5,7 @@ import Testimonials from '../components/Testimonials'
 import Scheduling from '../components/Scheduling'
 import Services from '../components/Services'
 import Faq from '../components/Faq'
+import LatestPosts from '../components/LastestPosts'
 import Contact from '../components/Contact'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
@@ -34,6 +35,7 @@ export default function Home() {
       <Scheduling />
       <Services />
       <Faq />
+      <LatestPosts />
       <Contact />
       <FloatZap />
     </DefaultLayout>

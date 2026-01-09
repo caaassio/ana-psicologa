@@ -10,7 +10,7 @@ export default function Posts() {
   
   useEffect(() => {
     sanityClient
-      .fetch(`*[_type == "post"] | order(publishedAt desc){
+      .fetch(`*[_type == "post"] | order(publishedAt desc) {
         title,
         excerpt,
         "slug": slug.current,
