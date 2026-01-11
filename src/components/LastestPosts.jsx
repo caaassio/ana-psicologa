@@ -8,7 +8,6 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/autoplay'
 
-
 export default function LatestPosts() {
   const [posts, setPosts] = useState([])
 
@@ -39,7 +38,7 @@ export default function LatestPosts() {
           delay: 6000,
           disableOnInteraction: false,
         }}
-        spaceBetween={24}
+        spaceBetween={12}
         slidesPerView={3}
         breakpoints={{
           0: { slidesPerView: 1 },
