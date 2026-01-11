@@ -31,7 +31,7 @@
 .latest-posts .swiper{
     background-color: #f0f0f0;
     height: 100%;
-    width: 1200px;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -103,5 +103,20 @@
         align-items: center;
         gap: 6px;
     }
+
+}
+
+@media (max-width: 768px) {
+  .latest-posts .swiper-wrapper{
+      padding-left: 40px;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .latest-posts .swiper-wrapper{
+      padding-left: 110px;
+  }
 
 }
