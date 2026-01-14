@@ -106,7 +106,11 @@ export default function Testimonials() {
                 modules={[Navigation, Pagination, Autoplay]}
                 navigation
                 pagination={{ clickable: true }}
-                autoplay={{ delay: 8000 }}
+                autoplay={{ 
+                    delay: 8000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true 
+                }}   
                 loop
                 className="swiper"
                 >

@@ -3,10 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { sanityClient } from '../sanityClient'
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react'
-// IMPORTANTE: Pagination deve estar aqui embaixo
 import { Navigation, Autoplay } from 'swiper/modules' 
 
-// CSS obrigatório do Swiper
 import 'swiper/css'
 import 'swiper/css/navigation'
 
@@ -34,28 +32,30 @@ export default function LastestPosts() {
         slidesPerView={1}
         spaceBetween={10}
         autoplay={{
-          delay: 3000,
-          disableOnInteraction: false, // Mantém rodando mesmo se o usuário clicar
-          pauseOnMouseEnter: true,      // Pausa quando o usuário passa o mouse por cima
+          delay: 7000,
+          disableOnInteraction: false, 
+          pauseOnMouseEnter: true,     
         }}
         loop={true}
         navigation={true}
         observer={true}
         observeParents={true}
-        modules={[Navigation, Autoplay]} // Agora Pagination está definido!
+        modules={[Navigation, Autoplay]} 
         breakpoints={{
           700: { slidesPerView: 2, spaceBetween: 20 },
           1100: { slidesPerView: 3, spaceBetween: 30 },
         }}
       >
         {posts.map((post) => (
-          // A KEY deve ir no SwiperSlide, que é o primeiro filho do map
           <SwiperSlide key={post.slug}>
             <Link href={`/post/${post.slug}`} className="post-card">
               {post.mainImageUrl && <img className="mascara" src={post.mainImageUrl} alt={post.title} />}
               <div className="post-content">
                 <h2>{post.title}</h2>
                 <p>{post.excerpt}</p>
+                <span>
+                  Leia mais <i className="fa-solid fa-arrow-right"></i>
+                </span>
               </div>
             </Link>
           </SwiperSlide>
