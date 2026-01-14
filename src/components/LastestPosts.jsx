@@ -1,65 +1,66 @@
 import './LastestPosts.css'
 import React, { useEffect, useState } from 'react'
 import { sanityClient } from '../sanityClient'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Autoplay } from 'swiper/modules'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/autoplay'
+// IMPORTANTE: Pagination deve estar aqui embaixo
+import { Navigation, Autoplay } from 'swiper/modules' 
 
-export default function LatestPosts() {
-  const [posts, setPosts] = useState([])
+// CSS obrigatório do Swiper
+import 'swiper/css'
+import 'swiper/css/navigation'
+
+export default function LastestPosts() {
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    sanityClient.fetch(`
-      *[_type == "post"] | order(publishedAt desc) {
-        title,
-        excerpt,
-        "slug": slug.current,
-        "mainImageUrl": mainImage.asset->url
-      }
-    `)
-    .then((data) => setPosts(data))
-    .catch(console.error)
-  }, [])
+    sanityClient.fetch(`*[_type == "post"] | order(publishedAt desc) {
+        title, excerpt, "slug": slug.current, "mainImageUrl": mainImage.asset->url
+      }`)
+      .then((data) => setPosts(data))
+      .catch(console.error)
+  }, []);
 
-  if (!posts.length) return null
+  if (!posts.length) return null;
 
   return (
-    <section className="latest-posts">
-      <h2 className="latest-title">Últimos Posts</h2>
-
+    <div className="container-lp" style={{display: 'block'}}>
+      <h2 className="title">Últimos Posts</h2>
       <Swiper
-        modules={[Navigation, Autoplay]}
-        navigation
-        loop={true}
+        id="swiper-ultimos-posts"
+        className="swiperPostsCustom"
+
+        key={posts.length}
+        slidesPerView={1}
+        spaceBetween={10}
         autoplay={{
-          delay: 6000,
-          disableOnInteraction: false,
+          delay: 3000,
+          disableOnInteraction: false, // Mantém rodando mesmo se o usuário clicar
+          pauseOnMouseEnter: true,      // Pausa quando o usuário passa o mouse por cima
         }}
-        spaceBetween={12}
-        slidesPerView={3}
+        loop={true}
+        navigation={true}
+        observer={true}
+        observeParents={true}
+        modules={[Navigation, Autoplay]} // Agora Pagination está definido!
         breakpoints={{
-          500: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          700: { slidesPerView: 2, spaceBetween: 20 },
+          1100: { slidesPerView: 3, spaceBetween: 30 },
         }}
       >
-        {posts.map(({ title, excerpt, slug, mainImageUrl }) => (
-          <SwiperSlide key={slug}>
-            <Link to={`/post/${slug}`} className="post">
-              {mainImageUrl && <img className="mascara" src={mainImageUrl} alt={title} />}
-              <h2>{title}</h2>
-              <p>{excerpt}</p>
-              <span>
-                Leia mais <i className="fa-solid fa-arrow-right"></i>
-              </span>
+        {posts.map((post) => (
+          // A KEY deve ir no SwiperSlide, que é o primeiro filho do map
+          <SwiperSlide key={post.slug}>
+            <Link href={`/post/${post.slug}`} className="post-card">
+              {post.mainImageUrl && <img className="mascara" src={post.mainImageUrl} alt={post.title} />}
+              <div className="post-content">
+                <h2>{post.title}</h2>
+                <p>{post.excerpt}</p>
+              </div>
             </Link>
           </SwiperSlide>
         ))}
       </Swiper>
-
-    </section>
-  )
+    </div>
+  );
 }
