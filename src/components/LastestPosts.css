@@ -19,21 +19,18 @@
     width: 100%; 
     max-width: 1110px; 
     margin: 0 auto;
-    display: block;
     box-sizing: border-box;
     background-color: inherit;
     display: flex;
     flex-direction: column;
-    background: white;
+    background: inherit !important;
     color: #333;
     text-decoration: none;
+    min-height: 400px;
     height: 100%;
-    width: 100%;
     border-radius: 15px;
     overflow: hidden;
     text-align: left;
-    min-height: 400px;
-    box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.15);
 }
 
 .container-lp .swiper-slide-next{
@@ -49,7 +46,6 @@
     margin-left: auto;
     margin-right: auto;
     font-family: var(--cambria);
-
 }
 
 .mascara {

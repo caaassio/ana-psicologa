@@ -4,7 +4,6 @@ import { sanityClient } from '../sanityClient'
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay } from 'swiper/modules' 
-import { Navigation, Autoplay } from 'swiper/modules' 
 
 import 'swiper/css'
 import 'swiper/css/navigation'
