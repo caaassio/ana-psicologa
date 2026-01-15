@@ -41,6 +41,7 @@ export default function Servicos() {
       <div className="content-servicos">
         {services.map(({ icon, title, text }, index) => (
           <a
+            key={index}
             href="https://wa.me/5511949186999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
             target="_blank"
             aria-label="Agendar consulta pelo WhatsApp"
@@ -48,7 +49,7 @@ export default function Servicos() {
             className="service-card-link"
           >
         
-            <div className="service-card" key={index}>
+            <div className="service-card">
               <div className="service-header">
                 <i className={`fa-regular ${icon}`}></i>
                 <h3>{title}</h3>

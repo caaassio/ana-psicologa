@@ -91,9 +91,9 @@ const testimonials = [
     {
         "author": "Iara Quintans",
         "text": [
-            "Eu e a Ana demos match na primeira sessão e isso é muito bom para o processo terapêutico, pois precisamos nos sentir a vontade e acolhidos para tratar acerca das nossas questões diárias e da vida.",
-            "Também, posso afirmar que alem de ser uma ótima psicóloga, ela tambem é extremamente responsável, pontual e comprometida dentro do seu papel.",
-            "Recomendo de olhos fechados tê-la como psicóloga e que a enxergue como um investimento no seu auto conhecimento e desenvolvimento ❤️"
+            "Eu e a Ana demos match na primeira sessão e isso é muito bom para o processo terapêutico, pois precisamos nos sentir à vontade e acolhidos para tratar acerca das nossas questões diárias e da vida.",
+            "Também posso afirmar que, além de ser uma ótima psicóloga, ela também é extremamente responsável, pontual e comprometida dentro do seu papel.",
+            "Recomendo de olhos fechados tê-la como psicóloga e que a enxergue como um investimento no seu autoconhecimento e desenvolvimento ❤️"
         ]
     }
 ]
@@ -121,6 +121,5 @@ export default function Testimonials() {
                 ))}
             </Swiper>
     </section>
-
   )
 }
