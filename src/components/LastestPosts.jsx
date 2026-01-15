@@ -4,6 +4,7 @@ import { sanityClient } from '../sanityClient'
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay } from 'swiper/modules' 
+import { Navigation, Autoplay } from 'swiper/modules' 
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -27,7 +28,6 @@ export default function LastestPosts() {
       <Swiper
         id="swiper-ultimos-posts"
         className="swiperPostsCustom"
-
         key={posts.length}
         slidesPerView={1}
         spaceBetween={10}
@@ -35,7 +35,7 @@ export default function LastestPosts() {
           delay: 7000,
           disableOnInteraction: false, 
           pauseOnMouseEnter: true,     
-        }}
+     }}
         loop={true}
         navigation={true}
         observer={true}
