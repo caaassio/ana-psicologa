@@ -71,10 +71,14 @@ export default function Faq() {
                 className={`accordion-item ${isActive ? 'active' : ''}`}
                 onClick={() => toggleItem(index)}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.transition = 'filter 0.5s ease-out, transform 0.5s ease-out'
-                  setTimeout(() => {
-                    e.currentTarget.style.transition = ''
-                  }, 500)
+                    const el = e.currentTarget; // captura antes
+                    el.style.transition = 'filter 0.5s ease-out, transform 0.5s ease-out';
+
+                    setTimeout(() => {
+                      if (document.body.contains(el)) {
+                        el.style.transition = '';
+                      }
+                    }, 500);
                 }}
               >
                 <div className={`accordion-item-header ${isActive ? 'active' : ''}`}>

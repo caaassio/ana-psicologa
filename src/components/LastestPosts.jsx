@@ -13,7 +13,10 @@ export default function LastestPosts() {
 
   useEffect(() => {
     sanityClient.fetch(`*[_type == "post"] | order(publishedAt desc) {
-        title, excerpt, "slug": slug.current, "mainImageUrl": mainImage.asset->url
+        title, 
+        excerpt, 
+        "slug": slug.current, 
+        "mainImageUrl": mainImage.asset->url
       }`)
       .then((data) => setPosts(data))
       .catch(console.error)
@@ -47,7 +50,7 @@ export default function LastestPosts() {
       >
         {posts.map((post) => (
           <SwiperSlide key={post.slug}>
-            <Link href={`/post/${post.slug}`} className="post-card">
+            <Link to={`/post/${post.slug}`} className="post-card">
               {post.mainImageUrl && <img className="mascara" src={post.mainImageUrl} alt={post.title} />}
               <div className="post-content">
                 <h2>{post.title}</h2>
