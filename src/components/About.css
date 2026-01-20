@@ -35,7 +35,7 @@
     position: absolute;
     left: 50%;
     bottom: -3px !important;
-    width: 17rem;
+    width: 100%;
     height: 3px;
     background: var(--cor-base);
     transform: translateX(-50%);
@@ -353,7 +353,6 @@
 
     .header-about h2::after {
         bottom: 5px !important;
-        width: 14rem;
     }
 
     .grid{
