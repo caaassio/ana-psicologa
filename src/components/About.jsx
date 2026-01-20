@@ -57,19 +57,21 @@ export default function About() {
             Com presença, afeto e a paciência de quem sabe que viver, às vezes, é por si só um bonito esforço.
           </p>
         </div>
-      </div>
 
-      <div className="foto-sobre-inferior">
-        {imagens.map((img, i) => (
-          <img
-            key={i}
-            src={img}
-            className={`foto-slide ${i === indiceAtual ? 'ativo' : ''}`}
-            alt="Foto da Psicóloga Ana Carolline"
-            loading="lazy"
-          />
-        ))}
+       <div className="foto-sobre-inferior">
+          {imagens.map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              className={`foto-slide ${i === indiceAtual ? 'ativo' : ''}`}
+              alt="Foto da Psicóloga Ana Carolline"
+              loading="lazy"
+            />
+          ))}
+        </div>
+
       </div>
+      
     </section>
   )
 }

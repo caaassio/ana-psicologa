@@ -100,6 +100,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+#faq h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 6px !important;
+    width: 23rem;
+    height: 3px;
+    background: var(--cor-base);
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
 .accordion{
@@ -247,5 +260,10 @@
 
     #faq h2{
         font-size: 1.9rem;
+    }
+
+    #faq h2::after {
+        bottom: 9px !important;
+        width: 17rem;
     }
 }

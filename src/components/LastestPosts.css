@@ -40,12 +40,25 @@
 
 .container-lp .title{
     display: flex;
-    margin: 30px 0 5px 0;
+    margin: 30px 0 10px 0;
     align-items: center;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
     font-family: var(--cambria);
+    position: relative;
+}
+
+.container-lp .title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px !important;
+    width: 16rem;
+    height: 3px;
+    background: var(--cor-base);
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
 .mascara {
@@ -67,6 +80,7 @@
     color: #272727;
     font-size: 1.4em;
     margin: 15px;
+
 }
 
 .container-lp .post-content p {
@@ -134,6 +148,10 @@
 
 @media (max-width: 766px) {
 
+    .container-lp .title::after {
+        bottom: -2px !important;
+        width: 13rem;
+    }
     .swiperPostsCustom .swiper-slide {
         width: calc((100%) / 1) !important; 
         margin-right: 30px;

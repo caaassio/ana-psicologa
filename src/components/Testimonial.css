@@ -20,12 +20,24 @@
     margin: 0 0 10px 0 ;
 }
 
-.swiper{
+#depoimentos h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px !important;
+    width: 16rem;
+    height: 3px;
+    background: var(--cor-base);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+#depoimentos .swiper{
     max-width: 1200px;       
     width: 100%;
     height: auto;
     background-color: #fff;
-    padding: 30px 0px;
+    padding: 10px 0px;
     box-shadow: 5px 5px 5px 0px rgba(0,0,0, 0.01);
     transition: all 0.6s ease-in-out;
     margin-left: auto;
@@ -46,15 +58,15 @@
     font-size: 4em;
 }
 
-.swiper-button-prev{
+#depoimentos .swiper-button-prev{
     left: 0;
 }
 
-.swiper-button-next{
+#depoimentos .swiper-button-next{
     right: 0;
 }
 
-.swiper-pagination{
+#depoimentos .swiper-pagination{
     display: flex;
     position: relative;
     justify-content: center;
@@ -67,16 +79,16 @@
     margin-right: auto;
 }
 
-.swiper-pagination-bullet {
+#depoimentos .swiper-pagination-bullet {
     background-color: #00000080 !important;
 }
 
-.swiper-container {
+#depoimentos .swiper-container {
     width: auto;
     margin: 0;
 }
 
-.swiper-slide {
+#depoimentos .swiper-slide {
     box-sizing: border-box;
     display: block;
     flex-direction: column;
@@ -84,11 +96,12 @@
     align-items: center;
     text-align: center;
     margin: 0;
+    padding: 0;
     width: auto;
     height: auto;
 }
 
-.swiper-slide-active{
+#depoimentos .swiper-slide-active{
     box-sizing: border-box;
     width: 100% !important;
     margin: 0 !important;
@@ -108,7 +121,7 @@
     flex-direction: column;
     position: relative;
     overflow-y: scroll;
-    margin: 30px 60px;
+    margin: 0px 60px 15px;
 }
 
 .autorDepoimento{
@@ -239,6 +252,11 @@
 
     #depoimentos h2{
         margin: 0 0 15px 0;
+    }
+
+    #depoimentos h2::after {
+        bottom: -3px !important;
+        width: 13rem;
     }
 
     .swiper-pagination{

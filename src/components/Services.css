@@ -21,6 +21,19 @@
     font-weight: 600;
     text-align: center;
     margin: 0 0 10px 0;
+    position: relative;
+}
+
+#servicos h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px !important;
+    width: 28rem;
+    height: 3px;
+    background: var(--cor-base);
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
 .content-servicos{
@@ -180,7 +193,14 @@
         margin: 0;
         padding: 0 25px;
         font-size: 2em;
+        line-height: 0.9em;
     }
+
+    #servicos h2::after {
+        bottom: -9px !important;
+        width: 16rem;
+    }
+
     .service-card{
         min-width: 85%;
         line-height: 1em;

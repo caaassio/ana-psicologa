@@ -253,7 +253,7 @@
     }
 
     .texto-home h1{
-        margin: 0.8rem;
+        margin: 0.8rem 0.8rem 0 0.8rem;
         font-size: 1.6em !important;
         line-height: 1.2em !important;
     }

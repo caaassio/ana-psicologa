@@ -27,6 +27,19 @@
     font-size: 2.5em;
     padding: 0;
     margin: 0;
+    position: relative;
+}
+
+.header-about h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px !important;
+    width: 17rem;
+    height: 3px;
+    background: var(--cor-base);
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
 .grid{
@@ -95,6 +108,9 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
+
+    grid-column: 1/6; 
+    margin-top: 30px;    
 }
 
 .foto-slide {
@@ -335,6 +351,11 @@
         text-align: center;
     }
 
+    .header-about h2::after {
+        bottom: 5px !important;
+        width: 14rem;
+    }
+
     .grid{
         display: flex;
         flex-direction: column;
@@ -351,6 +372,7 @@
         box-sizing: border-box;
         overflow: hidden;
         margin-bottom: 20px;
+        order: 1 !important;
     }
 
     .foto-sobre img {
@@ -361,7 +383,7 @@
         object-fit: cover !important;
     }
     .content-sobre{
-        order: 2;
+        order: 2 !important;
         font-size: 1.1em;
         text-align: justify;
         width: 100%;
@@ -369,7 +391,7 @@
     }
 
     .content-sobre-inferior{
-        order: 3;
+        order: 5 !important;
         font-size: 1.1em;
         text-align: justify;
         width: 100%;
@@ -378,7 +400,7 @@
     }
 
     .foto-sobre-inferior {
-        order: 4;
+        order: 3 !important;
         box-sizing: border-box;
         height: auto;
         width: 90vw;
@@ -392,9 +414,6 @@
         position: relative;
     }
 
-    .foto-sobre img{
-        object-fit: cover;
-    }
     .foto-slide {
         width: 90%;
         height: auto;

@@ -6,9 +6,22 @@
 #contato h2 {
     font-family: var(--cambria);
     font-weight: 700;
-    padding: 0 0px 30px 0;
+    padding: 0 0px 20px 0;
     margin: 0px;
     flex-wrap: nowrap;
+    position: relative;
+}
+
+#contato h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 20px !important;
+    width: 20rem;
+    height: 3px;
+    background: var(--cor-base);
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
 #contato a{
@@ -29,7 +42,7 @@
 .contato-info {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
 }
 
 .contato-item {
@@ -77,7 +90,7 @@
     gap: 50px;
     list-style: none;
     margin: 0;
-    padding: 20px 0 5px 0;
+    padding: 5px 0;
     font-size: 30px;
     color: var(--cor-base);
 }
@@ -120,6 +133,11 @@
 
     .contato-info{
         gap: 0;
+    }
+
+    #contato h2::after {
+        bottom: 18px !important;
+        width: 16rem;
     }
 
     .redes-sociais ul{
