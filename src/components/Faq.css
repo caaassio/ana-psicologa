@@ -48,6 +48,7 @@
 #faq.expanded {
     max-height: 2000px; 
     transform: max-height 0.8s ease-in;
+    padding: 0 !important;
 }
 
 #faq::after {

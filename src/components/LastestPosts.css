@@ -152,6 +152,7 @@
         width: calc((100% - 60px) / 3) !important; 
         margin-right: 30px !important;
     }
+
 }
 
 @media (min-width: 767px) and (max-width: 1109px) {
@@ -164,6 +165,9 @@
 	.container-lp .swiper-slide-next{
 		transform: none;
 	}
+    .container-lp .swiper{
+        padding-bottom: 12px !important;
+    }
 }
 
 @media (max-width: 766px) {
@@ -181,12 +185,17 @@
 	}
 
     .container-lp .swiper{
-        padding-bottom: 0 !important;
+        padding-bottom: 12px !important;
     }
 
 	.post-card{
 		width: 80% !important;
 		min-width: 80% !important;
 	}
+
+    .container-lp .post-content p{
+        padding: 0 !important;
+        margin: 0 15px !important;
+    }
 
 }

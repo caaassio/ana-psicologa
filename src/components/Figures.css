@@ -13,7 +13,7 @@
     z-index: 205 !important;
 }
 
-.figures-wrapper .jarallax-img2 {
+.figures-wrapper .jarallax-img {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -23,6 +23,9 @@
 .figures{
     display: flex;
     gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .figures>div{
