@@ -358,4 +358,8 @@
         display: none;
     }
 
+    .post-content p {
+        margin: 0 !important;
+    }
+
 }

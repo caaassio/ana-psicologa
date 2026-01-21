@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import './Figures.css'
-import agendeImg from '../assets/agende.jpeg'
+import figuresImg from '../assets/figures.jpg'
 import NumberCounter from "number-counter"
 
 export default function Figures() {
@@ -26,8 +26,8 @@ export default function Figures() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="agende" data-jarallax data-speed="0.5">
-      <img className="jarallax-img" src={agendeImg} alt="consultório psicológico" />
+    <section ref={sectionRef} className="figures-wrapper" data-jarallax data-speed="0.5">
+      <img className="jarallax-img2" src={figuresImg} alt="consultório psicológico" />
 
       <div className="figures">
         <div>

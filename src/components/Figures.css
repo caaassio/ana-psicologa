@@ -1,4 +1,4 @@
-.agende {
+.figures-wrapper {
     display: flex;
     height: 10rem;
     width: 100%;
@@ -7,16 +7,17 @@
     color: #f0f0f0;
     background-color: var(--cor-base); 
     position: relative;
-    overflow: hidden;
-    box-shadow: var(--sombra);
+    box-shadow: 0px 15px 20px 1px rgba(0, 0, 0, 0.1);
     font-family: var(--josefin);
+    box-sizing: border-box;
+    z-index: 205 !important;
 }
 
-.agende .jarallax-img {
+.figures-wrapper .jarallax-img2 {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    opacity: 0.05;
+    opacity: 0.09;
 }
 
 .figures{
@@ -63,7 +64,7 @@
 
 @media screen and (max-width: 768px) {
     
-    .agende{
+    .figures-wrapper{
         height: 110px !important;
         padding: 10px;
         box-sizing: border-box;

@@ -180,6 +180,10 @@
 		transform: none;
 	}
 
+    .container-lp .swiper{
+        padding-bottom: 0 !important;
+    }
+
 	.post-card{
 		width: 80% !important;
 		min-width: 80% !important;
