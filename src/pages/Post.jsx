@@ -121,7 +121,6 @@ export default function Post() {
                 </div>
 
                 <div className="post-content">
-                  {post.excerpt && <p><strong>{post.excerpt}</strong></p>}
                   <PortableText value={post.body} components={components} />
                 </div>
               </div>
