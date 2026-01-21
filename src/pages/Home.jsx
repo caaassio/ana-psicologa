@@ -10,6 +10,7 @@ import Contact from '../components/Contact'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import FloatZap from '../components/FloatingWhatsapp'
+import Figures from '../components/Figures'
 
 export default function Home() {
 
@@ -31,6 +32,7 @@ export default function Home() {
     <DefaultLayout>
       <Hero />
       <About />
+      <Figures />
       <Testimonials />
       <Scheduling />
       <Services />

@@ -1,0 +1,84 @@
+.agende {
+    display: flex;
+    height: 10rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    color: #f0f0f0;
+    background-color: var(--cor-base); 
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    font-family: var(--josefin);
+}
+
+.agende .jarallax-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+}
+
+.figures{
+    display: flex;
+    gap: 5rem;
+}
+
+.figures>div{
+    display: flex;
+    flex-direction: column;
+}
+
+.figures>div:nth-of-type(1){
+    color: white;
+    text-align: center;
+}
+
+.figures>div>span:nth-of-type(1){
+    color: white;
+    font-size: 2.0rem;
+}
+
+.figures>div:nth-of-type(2){
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.figures>div>span:nth-of-type(2){
+    color: var(--gray);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.figures>div:nth-of-type(3){
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .agende{
+        height: 110px !important;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .figures{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .figures span{
+        font-size: 16px !important;
+        font-weight: 600;
+        text-transform: inherit !important;
+        line-height: 1.1;
+    }
+
+}

@@ -59,7 +59,9 @@ export default function Faq() {
   }
 
   return (
+    
     <section className="faq-wrapper">
+      <div className="spacer"></div>
       <section id="faq" className={expanded ? 'expanded' : ''}>
         <h2>Dúvidas frequentes</h2>
         <div className="accordion">

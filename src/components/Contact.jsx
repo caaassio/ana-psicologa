@@ -4,6 +4,7 @@ import './Contact.css' // ajuste conforme seu arquivo de estilos
 export default function Contato() {
   return (
     <section id="contato">
+      <div className="spacer"></div>
       <div className="contato-wrapped">
         <h2>Entre em contato</h2>
 
