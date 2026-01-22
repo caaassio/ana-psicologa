@@ -297,7 +297,7 @@
 
     #faq h2::after {
         bottom: 9px !important;
-        width: 90%;
+        width: 100%;
     }
 
     #faq .accordion {

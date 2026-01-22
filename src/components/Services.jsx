@@ -37,7 +37,7 @@ const services = [
 export default function Servicos() {
   return (
     <section id="servicos">
-      <h2>Como eu posso te ajudar</h2>
+      <h2>Como posso te ajudar</h2>
       <div className="content-servicos">
         {services.map(({ icon, title, text }, index) => (
           <a
