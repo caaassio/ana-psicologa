@@ -130,14 +130,14 @@
         text-align: center;
         justify-content: center;
         gap: 0px;
-        padding: 30px 0;
+        padding: 30px 0 15px 0;
     }
 
     .content-servicos{
         margin: auto;
         width: 100%;
         height: auto;
-        padding: 30px 0;
+        padding: 30px 0 0 0;
     }
 
     #servicos h2{
@@ -153,14 +153,14 @@
         justify-content: center;
         gap: 0;
         margin: 0;
-        padding: 30px 0;
+        padding: 30px 0 0 0;
         width: 100%;
         box-sizing: border-box;
     }
     
     .content-servicos {
         box-sizing: border-box; 
-        padding: 30px 0px;
+        padding: 30px 0 15px 0;
         text-align: center;
     }
 
@@ -192,7 +192,7 @@
     }
 
     .content-servicos{
-        padding: 30px 0 10px 0;
+        padding: 30px 0 15px 0;
     }
 
     #servicos h2{
