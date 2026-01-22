@@ -81,10 +81,10 @@
     width: 100%;
 }
 
-.post-content p{
+.post-container .post-content p{
     line-height: 1.5em !important;
     padding: 7px 0 !important;
-    margin: 0 15px !important;
+    margin: 0 !important;
 }
 
 .author-post {

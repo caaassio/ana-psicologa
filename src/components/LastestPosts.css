@@ -32,12 +32,6 @@
     overflow: hidden;
     text-align: left;
     text-align: center;
-    
-}
-
-.container-lp p{
-    line-height: 1.2px !important;
-    font-size: 15px !important;
 }
 
 .container-lp .swiper-slide-next{
@@ -91,15 +85,18 @@
 
 .container-lp .post-content p {
     color: #666;
-    height: 95px;
+    height: 80px;
     font-size: 1em;
-    margin: 15px;
+    margin: 0 15px 15px 15px;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden; 
     text-overflow: ellipsis;
+
+    line-height: 1.2em;
+    font-size: 15px;
 }
 
 .container-lp .post-content span{
