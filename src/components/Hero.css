@@ -47,6 +47,7 @@
 .btn-wrapper{
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 #home .btn-whatsapp {
@@ -89,26 +90,25 @@
     transform: scale(1.05);
 }
 
-.custom-shape-divider-bottom-1768960613 {
+.custom-shape-divider-bottom-1769036612 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1768960613 svg {
+.custom-shape-divider-bottom-1769036612 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 73px;
-    transform: rotateY(180deg);
+    height: 90px;
 }
 
-.custom-shape-divider-bottom-1768960613 .shape-fill {
-    fill: #F0F0F0 !important;
-    border: 1px solid red;
+.custom-shape-divider-bottom-1769036612 .shape-fill {
+    fill: #f0f0f0;
 }
 
 @media (max-width: 1200px) and (min-width: 992px){
@@ -158,10 +158,6 @@
         gap: 0px;
     }
     
-    #home .btn-whatsapp {
-        margin-top: 30px;
-    }
-
     .texto-home{
         margin: auto;
         width: 700px;
@@ -214,6 +210,7 @@
     .btn-whatsapp-saiba{
         margin: 0 !important;
         padding: 0 !important;
+        width: 100% !important;
     }
     
     h2{
@@ -293,6 +290,10 @@
 
     .btn-whatsapp-saiba{
         width: 90% !important;
+    }
+
+    .custom-shape-divider-bottom-1769036612 svg {
+        height: 50px !important;
     }
 
 }

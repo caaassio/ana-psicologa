@@ -44,7 +44,7 @@ export default function Figures() {
         </div>
         <div>
           <span>
-            {visible && <NumberCounter end={7000} start={500} delay="3" preFix="+" />}
+            {visible && <NumberCounter end={7000} start={100} delay="3" preFix="+" />}
           </span>
           <span>Atendimentos</span>
         </div>
