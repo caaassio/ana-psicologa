@@ -3,6 +3,7 @@ import './Blog.css'
 import DefaultLayout from '../layouts/DefaultLayout'
 import { sanityClient } from '../sanityClient'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 export default function Posts() {
   const [posts, setPosts] = useState([])
@@ -38,27 +39,42 @@ export default function Posts() {
   }
 
   return (
-    <DefaultLayout>
-      <div className="posts-container">
-        {posts.map(({ title, excerpt, slug, mainImageUrl }) => (
-          <div className="post" key={slug}>
-            <Link to={`/post/${slug}`}>
-              {mainImageUrl && (
-                <img
-                  className="mascara"
-                  src={mainImageUrl}
-                  alt={title}
-                />
-              )}
-              <h2>{title}</h2>
-              <p>{excerpt}</p>
-              <span>
-                Leia mais <i className="fa-solid fa-arrow-right"></i>
-              </span>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </DefaultLayout>
+
+    <>
+      <Helmet>
+        <title>Blog de Psicologia | Psicóloga Ana Carolline</title>
+        <meta
+          name="description"
+          content="Artigos sobre saúde mental, autoconhecimento, ansiedade e psicoterapia."
+        />
+      </Helmet>
+
+      <h1 className="visually-hidden">
+        Blog de Psicologia – Ana Carolline
+      </h1>
+
+		<DefaultLayout>
+		<div className="posts-container">
+			{posts.map(({ title, excerpt, slug, mainImageUrl }) => (
+			<div className="post" key={slug}>
+				<Link to={`/post/${slug}`}>
+				{mainImageUrl && (
+					<img
+					className="mascara"
+					src={mainImageUrl}
+					alt={title}
+					/>
+				)}
+				<h2>{title}</h2>
+				<p>{excerpt}</p>
+				<span>
+					Leia mais <i className="fa-solid fa-arrow-right"></i>
+				</span>
+				</Link>
+			</div>
+			))}
+		</div>
+		</DefaultLayout>
+    </>
   )
 }

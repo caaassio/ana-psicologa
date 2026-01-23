@@ -11,6 +11,7 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import FloatZap from '../components/FloatingWhatsapp'
 import Figures from '../components/Figures'
+import { Helmet } from 'react-helmet-async'
 
 export default function Home() {
 
@@ -28,6 +29,15 @@ export default function Home() {
   }, [location])
 
   return (
+
+    <>
+      <Helmet>
+        <title>Psicóloga Ana Carolline | Atendimento Psicológico Online</title>
+        <meta
+          name="description"
+          content="Atendimento psicológico online para adolescentes e adultos com abordagem psicanalítica."
+        />
+      </Helmet>
     
     <DefaultLayout>
       <Hero />
@@ -41,6 +51,6 @@ export default function Home() {
       <Contact />
       <FloatZap />
     </DefaultLayout>
-
+  </>
   )
 }

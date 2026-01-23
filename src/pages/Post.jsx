@@ -6,6 +6,7 @@ import DefaultLayout from '../layouts/DefaultLayout'
 import './Post.css'
 import AutorBox from '../components/Author-box'
 import BtnVoltar from '../components/Btn-voltar'
+import { Helmet } from 'react-helmet-async'
 
 export default function Post() {
   const { slug } = useParams()
@@ -91,44 +92,74 @@ export default function Post() {
   const timeToRead = readingTime(bodyText)
 
   return (
-    <DefaultLayout>
 
-      <div className="post-container">
-      <BtnVoltar/>
+    <>
+		<Helmet>
+			<title>{post.title} | Psicóloga Ana Carolline</title>
+			<meta
+			name="description"
+			content={post.subtitle}
+			/>
 
-          <div className="post-box">
-            {/* Imagem */}
-            <div className="post-img">
-              {post.mainImage && (
-                <img src={post.mainImage} alt={post.title} />
-              )}
-            </div>
+			<meta property="og:type" content="article" />
+			<meta property="og:title" content={post.title} />
+			<meta property="og:description" content={post.subtitle} />
+			<meta property="og:image" content={post.mainImage} />
+			<meta
+				property="og:url"
+				content={`https://ana-psicologa.com/post/${slug}`}
+			/>
+			<meta property="og:site_name" content="Psicóloga Ana Carolline" />
 
-            {/* Texto */}
-            <article className="post-text">
-              <div className="post-meta">
-                <h2>{post.title}</h2>
-                <h3>{post.subtitle}</h3>
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:title" content={post.title} />
+			<meta name="twitter:description" content={post.subtitle} />
+			<meta name="twitter:image" content={post.mainImage} />
+			<link
+			rel="canonical"
+			href={`https://ana-psicologa.com/post/${slug}`}
+			/>
+		</Helmet>
 
-                <div className="author-post">
-                  <div className="author">
-                    <span>Por {post.author || 'Ana Carolline'}</span>
-                  </div>
+		<DefaultLayout>
 
-                  <div className="data-post">
-                    {dataFormatada} <i className="fa-solid fa-clock"></i>  {timeToRead} min
-                  </div>
-                </div>
+		<div className="post-container">
+		<BtnVoltar/>
 
-                <div className="post-content">
-                  <PortableText value={post.body} components={components} />
-                </div>
-              </div>
-            </article>
-            <AutorBox/>
-          </div>
-      </div>
-    
-    </DefaultLayout>
+			<div className="post-box">
+				{/* Imagem */}
+				<div className="post-img">
+				{post.mainImage && (
+					<img src={post.mainImage} alt={post.title} />
+				)}
+				</div>
+
+				{/* Texto */}
+				<article className="post-text">
+				<div className="post-meta">
+					<h1>{post.title}</h1>
+					<h2>{post.subtitle}</h2>
+
+					<div className="author-post">
+					<div className="author">
+						<span>Por {post.author || 'Ana Carolline'}</span>
+					</div>
+
+					<div className="data-post">
+						{dataFormatada} <i className="fa-solid fa-clock"></i>  {timeToRead} min
+					</div>
+					</div>
+
+					<div className="post-content">
+					<PortableText value={post.body} components={components} />
+					</div>
+				</div>
+				</article>
+				<AutorBox/>
+			</div>
+		</div>
+		
+		</DefaultLayout>
+    </>
   )
 }

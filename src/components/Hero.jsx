@@ -17,7 +17,9 @@ export default function Hero() {
       <img className="jarallax-img" src={bgHome} alt="Fundo psicologia" />
 
       <div className="texto-home">
-        <h1>Às vezes, a vida vai ficando silenciosamente pesada</h1>
+        <h1 className="visually-hidden">Atendimento Psicológico Online para Adolescentes e Adultos</h1>
+        
+        <h2>Às vezes, a vida vai ficando silenciosamente pesada</h2>
 
         <p>
           O que antes se resolvia com tempo ou distração, <b>já não parece funcionar</b>.

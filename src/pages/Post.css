@@ -65,13 +65,13 @@
     box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.2);
 }
 
-.post-text h2{
-    font-size: 2em;
+.post-text h1{
+    font-size: 1.7em !important;
     margin: 0 !important;
 }
 
-.post-text h3{
-    font-size: 1.3em;
+.post-text h2{
+    font-size: 1.3em !important;
     margin: 10px 0 !important;
 }
 
@@ -297,7 +297,7 @@
         font-size: 0.7em !important;
     }
 
-    .autor h2{
+    .autor h1{
         font-size: 1.1em !important;
     }
 
@@ -352,6 +352,10 @@
         box-sizing: border-box;
         width: auto !important;
         margin: 0 20px !important;
+    }
+
+    .post-text h1{
+        line-height: 1.05em;
     }
 
     .post-container .btn-voltar{

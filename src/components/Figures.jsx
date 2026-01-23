@@ -12,10 +12,10 @@ export default function Figures() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.disconnect(); // ativa uma vez
+          observer.disconnect(); 
         }
       },
-      { threshold: 0.3 } // deixa mais suave
+      { threshold: 0.3 } 
     );
 
     if (sectionRef.current) {
@@ -27,7 +27,7 @@ export default function Figures() {
 
   return (
     <section ref={sectionRef} className="figures-wrapper" data-jarallax data-speed="0.5">
-      <img className="jarallax-img" src={figuresImg} alt="consultório psicológico" />
+      <img className="jarallax-img" src={figuresImg} alt="números de atendimentos psicológicos" />
 
       <div className="figures">
         <div>
