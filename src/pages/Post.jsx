@@ -96,6 +96,7 @@ export default function Post() {
     <>
 		<Helmet>
 			<title>{post.title} | Psicóloga Ana Carolline</title>
+
 			<meta
 			name="description"
 			content={post.subtitle}
@@ -107,7 +108,7 @@ export default function Post() {
 			<meta property="og:image" content={post.mainImage} />
 			<meta
 				property="og:url"
-				content={`https://ana-psicologa.com/post/${slug}`}
+				content={`https://psicologaanacarolline.com.br/post/${slug}`}
 			/>
 			<meta property="og:site_name" content="Psicóloga Ana Carolline" />
 
@@ -116,8 +117,8 @@ export default function Post() {
 			<meta name="twitter:description" content={post.subtitle} />
 			<meta name="twitter:image" content={post.mainImage} />
 			<link
-			rel="canonical"
-			href={`https://ana-psicologa.com/post/${slug}`}
+				rel="canonical"
+				href={`https://psicologaanacarolline.com.br/post/${slug}`}
 			/>
 		</Helmet>
 

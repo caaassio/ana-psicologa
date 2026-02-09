@@ -33,6 +33,10 @@ export default function Home() {
     <>
       <Helmet>
         <title>Psicóloga Ana Carolline | Atendimento Psicológico Online</title>
+        <link
+          rel="canonical"
+          href="https://www.psicologaanacarolline.com.br/"
+        />
         <meta
           name="description"
           content="Atendimento psicológico online para adolescentes e adultos com abordagem psicanalítica."

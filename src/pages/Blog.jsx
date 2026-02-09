@@ -43,6 +43,10 @@ export default function Posts() {
     <>
       <Helmet>
         <title>Blog de Psicologia | Psicóloga Ana Carolline</title>
+        <link
+          rel="canonical"
+          href="https://www.psicologaanacarolline.com.br/blog"
+        />
         <meta
           name="description"
           content="Artigos sobre saúde mental, autoconhecimento, ansiedade e psicoterapia."
