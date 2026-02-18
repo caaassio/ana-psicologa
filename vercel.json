@@ -1,20 +1,20 @@
 {
   "redirects": [
     {
-      "source": "/",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "www.psicologaanacarolline.com.br"
         }
       ],
-      "destination": "https://psicologaanacarolline.com.br",
+      "destination": "https://psicologaanacarolline.com.br/:path*",
       "permanent": true
     }
   ],
   "rewrites": [
     {
-      "source": "/((?!assets|.*\\.).*)",
+      "source": "/((?!.*\\.).*)",
       "destination": "/index.html"
     }
   ]
