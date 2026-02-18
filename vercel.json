@@ -1,26 +1,21 @@
 {
-  	"redirects": [
+  "redirects": [
     {
-      	"source": 
-        	"http://psicologaanacarolline.com.br/:path*",
-      	"destination": 
-        	"https://psicologaanacarolline.com.br/:path*",
-      	"permanent": true
-    },
-    {
-      	"source": 
-       		"https://www.psicologaanacarolline.com.br/:path*",
-      	"destination": 
-        	"https://psicologaanacarolline.com.br/:path*",
-      	"permanent": true
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.psicologaanacarolline.com.br"
+        }
+      ],
+      "destination": "https://psicologaanacarolline.com.br/:path*",
+      "permanent": true
     }
   ],
-  	"rewrites": [
-	{
-	  	"source": 
-			"/(.*)",
-	  	"destination": 
-			"/index.html"
-	}
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
