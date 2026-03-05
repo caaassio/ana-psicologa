@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './About.css'
-import './Reveal'
 import imageHome from '../assets/image-home.jpg'
 import imageAbout1 from '../assets/image-about-1.jpg'
 import imageAbout2 from '../assets/image-about-2.jpg'
