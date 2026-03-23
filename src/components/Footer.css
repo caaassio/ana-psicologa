@@ -27,7 +27,7 @@ footer {
         justify-content: center;
         display: flex;
         flex-direction: column;
-        height: 4em !important;
+        height: 6em !important;
         font-size: 0.9em !important;
     }
     

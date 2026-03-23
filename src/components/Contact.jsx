@@ -24,7 +24,7 @@ export default function Contato() {
 						aria-label="Agendar consulta pelo telefone"
 						rel="noopener noreferrer"
 					>
-						<i className="fa-regular fa-phone"></i> +55 11 94918 6999
+						<i className="fa-solid fa-phone"></i> +55 11 94918 6999
 					</a>
 					
 					<a

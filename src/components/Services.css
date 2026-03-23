@@ -91,6 +91,14 @@
     transition: all 0.3s ease;
 }
 
+.service-header span{
+    font-size: 2.7em;
+    padding: 10px 20px 10px 0px;
+    color: var(--cor-base);
+    transform:scale(1);
+    transition: all 0.3s ease;
+}
+
 .service-card:hover .service-header i{
     transform:scale(1.1);
     transition: all 0.3s ease;
@@ -173,6 +181,11 @@
     }
     
     .content-servicos i{
+        padding: 0px 10px 0px 0px;
+        color: var(--cor-base);
+    }
+
+    .content-servicos span{
         padding: 0px 10px 0px 0px;
         color: var(--cor-base);
     }

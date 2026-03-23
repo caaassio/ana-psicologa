@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Header.css'
-import logo from '../assets/logo-site.png'
+import logo from '../assets/logo-site2.png'
 
 export default function Header() {
 	

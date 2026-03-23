@@ -53,7 +53,6 @@ header #escrito {
     display: block;
     float: left;
     height: 60px;
-    filter: invert(100%);
 }
 
 header a:link,
