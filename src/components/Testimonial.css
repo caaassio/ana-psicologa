@@ -16,7 +16,8 @@
     display: inline-flex;
     position: relative;
     font-weight: 600;
-    margin: 0 0 10px 0 ;
+    margin: 0 0 10px 0;
+    transition-delay: .5s;
 }
 
 #depoimentos h2::after {
@@ -44,16 +45,23 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-    color: #00000054 !important;
+    color:  #c7c7c7 !important;
     position: absolute;
     font-weight: bold;
     transform: translateY(-50%);
     overflow: visible;
-    display: flex;
+    display: flex !important;
     z-index: 15;
     padding: 0; 
     margin: 0;
     font-size: 4em;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+    color: var(--cor-base) !important;
+    transition: all 0.3s ease;
 }
 
 #depoimentos .swiper-button-prev{

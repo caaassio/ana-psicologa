@@ -5,6 +5,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import useFadeIn from '../hooks/useFadeIn'
 
 const testimonials = [
 
@@ -99,9 +100,14 @@ const testimonials = [
 ]
 
 export default function Testimonials() {
+
+    const fadeRef = useFadeIn();
+
   return (
     <section id="depoimentos">
-        <h2>Depoimentos</h2>
+        <h2 ref={fadeRef} className="fade-up">
+            Depoimentos
+        </h2>
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 navigation

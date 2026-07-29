@@ -1,16 +1,43 @@
+.header-blog{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--cambria);
+    transition-delay: 0s;
+}
+
+.header-blog h2{
+    font-size: 2.5em;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.header-blog h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px !important;
+    width: 100%;
+    height: 3px;
+    background: var(--cor-base);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
 .posts-container{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     box-sizing: border-box;
-    padding: 50px 20px;
+    padding: 20px 20px 50px;
     gap: 40px;
     background-color: white;
     width: 100%;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto 0;
     font-family: var(--cambria);
 }
 
@@ -26,7 +53,7 @@
 }
 
 .post:hover{
-    transform: scale(1.03);
+    transform: scale(1.03) !important;
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
@@ -40,7 +67,7 @@
 
 .post a {
     display: inline-block;
-    background: F0F0F0;
+    background: #F0F0F0;
     text-decoration: none;
 }
 

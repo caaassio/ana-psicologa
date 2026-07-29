@@ -7,11 +7,15 @@ import './Post.css'
 import AutorBox from '../components/Author-box'
 import BtnVoltar from '../components/Btn-voltar'
 import { Helmet } from 'react-helmet-async'
+import useFadeIn from '../hooks/useFadeIn'
 
 export default function Post() {
   const { slug } = useParams()
   const [post, setPost] = useState(null)
   const [loading, setLoading] = useState(true)
+  const fadeImgRef = useFadeIn()
+  const fadePostRef = useFadeIn()
+  const fadeAutorRef = useFadeIn()
 
   useEffect(() => {
     sanityClient
@@ -129,14 +133,14 @@ export default function Post() {
 
 			<div className="post-box">
 				{/* Imagem */}
-				<div className="post-img">
+				<div className="post-img fade-up" ref={fadeImgRef}>
 				{post.mainImage && (
 					<img src={post.mainImage} alt={post.title} />
 				)}
 				</div>
 
 				{/* Texto */}
-				<article className="post-text">
+				<article className="post-text fade-up" ref={fadePostRef} style={{ transitionDelay: '0.5s' }}> 
 				<div className="post-meta">
 					<h1>{post.title}</h1>
 					<h2>{post.subtitle}</h2>
@@ -156,7 +160,9 @@ export default function Post() {
 					</div>
 				</div>
 				</article>
-				<AutorBox/>
+        <div className="autorBoxBox fade-up" ref={fadeAutorRef}>
+			  	<AutorBox/>
+        </div>
 			</div>
 		</div>
 		

@@ -1,16 +1,22 @@
 import React from 'react'
 import './Testimonial.css'
+import useFadeIn from '../hooks/useFadeIn'
 
 export default function Testimonial({ text, author }) {
-	return (
-		<div className="swiper-slide">
-			<blockquote className="quote">
-				{text.map((p, i) => (
-				<p key={i}>{p}</p>
-				))}
+	const quoteRef = useFadeIn();
+	const authorRef = useFadeIn();
 
-				<span className="autorDepoimento">{author}</span>
-			</blockquote>
-		</div>
-	)
+	return (
+        <>
+            <blockquote ref={quoteRef} className="quote fade-right">
+                {text.map((p, i) => (
+                    <p key={i}>{p}</p>
+                ))}
+
+                <span ref={authorRef} className="autorDepoimento fade-up">
+                    {author}
+                </span>
+            </blockquote>
+        </>
+    );
 }

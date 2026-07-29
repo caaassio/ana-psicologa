@@ -4,11 +4,14 @@ import DefaultLayout from '../layouts/DefaultLayout'
 import { sanityClient } from '../sanityClient'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import useFadeIn from '../hooks/useFadeIn'
 
 export default function Posts() {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
-  
+  const fadeTitleRef = useFadeIn()
+  const fadePostRef = useFadeIn()
+
   useEffect(() => {
     sanityClient
       .fetch(`*[_type == "post"] | order(publishedAt desc) {
@@ -58,9 +61,20 @@ export default function Posts() {
       </h1>
 
 		<DefaultLayout>
+
 		<div className="posts-container">
-			{posts.map(({ title, excerpt, slug, mainImageUrl }) => (
-			<div className="post" key={slug}>
+
+			<div className="header-blog fade-up" ref={fadeTitleRef}>
+				<h2>Artigos e reflexões</h2>
+			</div>
+
+			{posts.map(({ title, excerpt, slug, mainImageUrl }, index) => (
+			<div 
+				className="post fade-up" 
+				key={slug}
+				ref={fadePostRef}
+				style={{ transitionDelay: `${index * 0.08}s` }}
+			>
 				<Link to={`/post/${slug}`}>
 				{mainImageUrl && (
 					<img

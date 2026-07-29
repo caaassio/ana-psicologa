@@ -65,6 +65,30 @@
     margin-right: auto;
 }
 
+.service-card-link:nth-child(1) .service-card {
+    transition-delay: .1s;
+}
+
+.service-card-link:nth-child(2) .service-card {
+    transition-delay: .2s;
+}
+
+.service-card-link:nth-child(3) .service-card {
+    transition-delay: .3s;
+}
+
+.service-card-link:nth-child(4) .service-card {
+    transition-delay: .4s;
+}
+
+.service-card-link:nth-child(5) .service-card {
+    transition-delay: .5s;
+}
+
+.service-card-link:nth-child(6) .service-card {
+    transition-delay: .6s;
+}
+
 .service-card-link {
     display: inline-flex;
     text-decoration: none;

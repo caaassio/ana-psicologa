@@ -119,7 +119,7 @@
 .accordion{
     width: 100%;
     max-width: 1150px;
-    margin: 0 auto;
+    margin: 20px auto 0;
     box-sizing: border-box;
     font-size: 20px;
     padding: 0 0 0 0;
@@ -129,7 +129,7 @@
 
 .accordion-item{
     color: #fff;
-    margin: 1rem 0;
+    margin: 1rem;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 0 rgba(0,0,0, 0.05);
     background-color: var(--cor-base);

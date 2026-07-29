@@ -1,5 +1,6 @@
 import React from 'react'
 import './Services.css'
+import useFadeIn from '../hooks/useFadeIn'
 
 const services = [
 	{
@@ -35,9 +36,13 @@ const services = [
 ]
 
 export default function Servicos() {
+
+	const fadeRef = useFadeIn();
+	const cardRef = useFadeIn();
+
 	return (
 		<section id="servicos">
-			<h2>Como posso te ajudar</h2>
+			<h2 className="fade-up" ref={fadeRef}>Como posso te ajudar</h2>
 			<div className="content-servicos">
 				{services.map(({ icon, title, text }, index) => (
 				<a
@@ -49,7 +54,7 @@ export default function Servicos() {
 					className="service-card-link"
 				>
 				
-					<div className="service-card">
+					<div className="service-card fade-up" ref={cardRef}>
 						<div className="service-header">
 							{/* <i className={`fa-regular ${icon}`}></i> */}
 							<span className="material-symbols-outlined">{icon}</span>

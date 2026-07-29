@@ -4,12 +4,14 @@ import { sanityClient } from '../sanityClient'
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay } from 'swiper/modules' 
-
 import 'swiper/css'
 import 'swiper/css/navigation'
+import useFadeIn from '../hooks/useFadeIn'
 
 export default function LastestPosts() {
 	const [posts, setPosts] = useState([]);
+	const fadeTitleRef = useFadeIn();
+	const fadeItemsRef = useFadeIn();
 
 	useEffect(() => {
 		sanityClient.fetch(`*[_type == "post"] | order(publishedAt desc) {
@@ -30,7 +32,7 @@ export default function LastestPosts() {
 			<div className="spacer2"></div>
 		
 			<div className="container-lp" style={{display: 'block'}}>
-				<h2 className="title">Últimos Posts</h2>
+				<h2 className="title fade-up" ref={fadeTitleRef}>Últimos Posts</h2>
 				<Swiper
 					id="swiper-ultimos-posts"
 					className="swiperPostsCustom"
@@ -52,10 +54,24 @@ export default function LastestPosts() {
 						1100: { slidesPerView: 3, spaceBetween: 30 },
 					}}
 				>
-				{posts.map((post) => (
+				{posts.map((post, index) => (
 					<SwiperSlide key={post.slug}>
-						<Link to={`/post/${post.slug}`} className="post-card">
-							{post.mainImageUrl && <img className="mascara" src={post.mainImageUrl} alt={post.title} />}
+						<Link
+							ref={fadeItemsRef}
+							to={`/post/${post.slug}`}
+							className="post-card fade-up"
+							style={{
+								transitionDelay: `${index * 0.1}s`
+							}}
+						>
+							{post.mainImageUrl && (
+								<img 
+									className="mascara" 
+									src={post.mainImageUrl} 
+									alt={post.title} 
+								/>
+							)}
+
 							<div className="post-content">
 								<h2>{post.title}</h2>
 								<p>{post.excerpt}</p>

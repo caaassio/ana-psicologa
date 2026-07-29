@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './Faq.css'
+import useFadeIn from '../hooks/useFadeIn'
 
 const faqData = [
 	{
@@ -53,6 +54,9 @@ export default function Faq() {
 	const [activeIndex, setActiveIndex] = useState(null)
 	const contentRefs = useRef([]) 
 	const [expanded, setExpanded] = useState(false)
+	const fadeTitleRef = useFadeIn();
+	const fadeItemsRef = useFadeIn();
+	const fadeButtonRef = useFadeIn();
 
 	const toggleItem = (index) => {
 		setActiveIndex(activeIndex === index ? null : index)
@@ -65,14 +69,16 @@ export default function Faq() {
 			<div className="spacer"></div>
 
 			<section id="faq" className={expanded ? 'expanded' : ''}>
-				<h2>Dúvidas frequentes</h2>
+				<h2 className='fade-up' ref={fadeTitleRef}>Dúvidas frequentes</h2>
 				<div className="accordion">
 				{faqData.map((item, index) => {
 					const isActive = activeIndex === index
 					return (
 						<div
 							key={index}
-							className={`accordion-item ${isActive ? 'active' : ''}`}
+							ref={fadeItemsRef}
+							className={`accordion-item fade-up ${isActive ? 'active' : ''}`}
+							style={{ transitionDelay: `${index * 0.08}s` }}
 							onClick={() => toggleItem(index)}
 							onMouseLeave={(e) => {
 								const el = e.currentTarget; // captura antes
@@ -111,8 +117,9 @@ export default function Faq() {
 
 			<div className="faq-toggle-wrapper">
 				<button
-					className="faq-toggle-btn"
+					className="faq-toggle-btn fade-up"
 					onClick={() => setExpanded(!expanded)}
+					ref={fadeButtonRef}
 				>
 					{expanded ? 'Ver menos' : 'Ver mais'}
 				</button>

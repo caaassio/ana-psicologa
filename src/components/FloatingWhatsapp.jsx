@@ -1,37 +1,33 @@
-import { useEffect, useState } from 'react'
-import './FloatingWhatsapp.css'
+import { useEffect, useState } from "react";
+import "./FloatingWhatsapp.css";
 
 export default function FloatingWhatsapp() {
-	
-	const [visible, setVisible] = useState(false)
+  const [opacity, setOpacity] = useState(1);
 
-	useEffect(() => {
-		const homeSection = document.getElementById('home')
-		if (!homeSection) return
+useEffect(() => {
+  const whatsapp = document.querySelector(".floating-whatsapp");
 
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				setVisible(!entry.isIntersecting)
-			},
-			{
-				threshold: 0.1
-			}
-		)
+  function handleScroll() {
+    whatsapp.style.opacity = window.scrollY > 0 ? "0.3" : "1";
+  }
 
-		observer.observe(homeSection)
+  window.addEventListener("scroll", handleScroll);
 
-		return () => observer.disconnect()
-	}, [])
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
-	return (
-		<a
-			href="https://wa.me/5511949186999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
-			target="_blank"
-			rel="noopener noreferrer"
-			aria-label="Agendar consulta pelo WhatsApp"
-			className={`floating-whatsapp ${visible ? 'show' : ''}`}
-			>
-			<i className="fa-brands fa-whatsapp"></i>
-		</a>
-	)
+  return (
+    <a
+      href="https://wa.me/5511949186999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Agendar consulta pelo WhatsApp"
+      className="floating-whatsapp"
+      style={{ opacity }}
+    >
+      <i className="fa-brands fa-whatsapp"></i>
+    </a>
+  );
 }

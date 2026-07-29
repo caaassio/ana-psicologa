@@ -1,17 +1,25 @@
 import React from 'react'
 import './Contact.css' 
+import useFadeIn from '../hooks/useFadeIn'
 
 export default function Contato() {
+	const fadeTitleRef = useFadeIn();
+	const fadeMailRef = useFadeIn();
+	const fadePhoneRef = useFadeIn();
+	const fadeWhatsappRef = useFadeIn();
+	const fadeIconsRef = useFadeIn();
+
 	return (
 		<section id="contato">
 		<div className="spacer"></div>
 			<div className="contato-wrapped">
-				<h2>Entre em contato</h2>
+				<h2 className='fade-up' ref={fadeTitleRef}>Entre em contato</h2>
 
 				<div className="contato-info">
 					<a
 						href="mailto:anacpsicologa@icloud.com"
-						className="contato-item"
+						className="contato-item fade-up"
+						ref={fadeMailRef}
 						aria-label="Marcar consulta por email"
 						rel="noopener noreferrer"
 					>
@@ -20,7 +28,8 @@ export default function Contato() {
 
 					<a
 						href="tel:+5511949186999"
-						className="contato-item"
+						className="contato-item fade-up"
+						ref={fadePhoneRef}
 						aria-label="Agendar consulta pelo telefone"
 						rel="noopener noreferrer"
 					>
@@ -30,7 +39,8 @@ export default function Contato() {
 					<a
 						href="https://wa.me/5511949186999"
 						target="_blank"
-						className="contato-item"
+						className="contato-item fade-up"
+						ref={fadeWhatsappRef}
 						aria-label="Agendar consulta pelo WhatsApp"
 						rel="noopener noreferrer"
 					>
@@ -38,7 +48,7 @@ export default function Contato() {
 					</a>
 				</div>
 
-				<div className="redes-sociais">
+				<div className="redes-sociais fade-up" ref={fadeIconsRef}>
 					<ul>
 						<li>
 							<a
