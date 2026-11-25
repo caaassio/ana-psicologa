@@ -3,6 +3,8 @@ import DefaultLayout from '../layouts/DefaultLayout';
 import FilmeCard from '../components/FilmeCard';
 import './ListaFilmes.css';
 import filmes from '../components/filmes';
+import headerLista from '../assets/header-lista.jpg';
+import headerMobile from '../assets/header-mobile.jpg';
 
 export default function ListaFilmes() {
   return (
@@ -19,8 +21,8 @@ export default function ListaFilmes() {
 								<div className="data-post">23 nov 2026</div>
 								</div>
 								<picture>
-									<source media="(max-width: 765px)" srcSet="./src/assets/header-mobile.jpg" />
-									<img src="./src/assets/header-lista.jpg" alt="" />
+									<source media="(max-width: 765px)" srcSet={headerMobile} />
+									<img src={headerLista} alt="" />
 								</picture>
 								<div className="post-content">
 								<p>
